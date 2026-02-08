@@ -1,7 +1,7 @@
 
-  # Website clone
+  # Website Embux guitar
 
-  This is a code bundle for Website clone. The original project is available at https://www.figma.com/design/R9xnd5z1XW4cIhvZCeiGVL/Website-clone.
+ This is an ecommerce website 
 
   ## Running the code
 

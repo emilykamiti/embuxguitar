@@ -202,7 +202,7 @@ export function HeroCarousel() {
         {/* Reduced Shop Now Button */}
         <div className="mt-100"> {/* Changed mt-90 to mt-64 */}
           <Link
-            to="/product/1"
+            to="/shop"
             className="relative bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-10 py-4 text-lg font-bold uppercase tracking-widest transition-all duration-300 overflow-hidden group shadow-xl shadow-red-500/30"
             style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}
           >

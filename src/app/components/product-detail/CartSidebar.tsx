@@ -83,13 +83,15 @@ export function CartSidebar({
               <span className="relative text-black z-10">VIEW CART</span>
               <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
             </Link>
-            <button
-              className="relative flex-1 bg-red-600 hover:bg-red-700 text-white py-3 px-6 font-bold uppercase tracking-wide transition-colors overflow-hidden group"
-              style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}
-            >
-              <span className="relative z-10">CHECKOUT</span>
-              <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
-            </button>
+           <Link to="/checkout">
+             <button
+               className="relative flex-1 bg-red-600 hover:bg-red-700 text-white py-3 px-6 font-bold uppercase tracking-wide transition-colors overflow-hidden group"
+               style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}
+             >
+               <span className="relative z-10">CHECKOUT</span>
+               <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500" />
+             </button>
+           </Link>
           </div>
 
           {/* You May Also Like */}

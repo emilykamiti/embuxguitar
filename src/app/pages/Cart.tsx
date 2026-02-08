@@ -166,11 +166,12 @@ export function Cart() {
         )}
       </main>
 
-      {/* You May Also Like - Moved outside main to be full width */}
-      <section className="w-full bg-white py-4">
+      {/* You May Also Like - Match Shop page layout */}
+      <section className="py-2 bg-white">
         <div className="max-w-8xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl italic mb-8 uppercase">YOU MAY ALSO LIKE</h2>
+          <h2 className="text-3xl md:text-4xl italic mb-12 uppercase">YOU MAY ALSO LIKE</h2>
 
+          {/* Calculate centering logic for last row */}
           {(() => {
             const itemsCount = recommendedProducts.length;
             const itemsPerRow = 4;
@@ -178,20 +179,20 @@ export function Cart() {
             const needsCentering = itemsInLastRow > 0 && itemsInLastRow < itemsPerRow;
 
             return (
-              <div className={`flex flex-wrap ${needsCentering ? 'justify-center' : 'justify-start'} gap-4`}>
+              <div className={`flex flex-wrap ${needsCentering ? 'justify-center' : 'justify-start'} gap-8`}>
                 {recommendedProducts.map((product) => (
                   <div
                     key={product.id}
-                    className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(25%-0.75rem)] max-w-xs"
+                    className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] max-w-xs"
                   >
                     <Link
                       to={`/product/${product.id}`}
-                      className="cursor-pointer flex flex-col"
+                      className="group cursor-pointer flex flex-col h-full"
                     >
-                      {/* Card Container with fixed pixel dimensions */}
-                      <div className="bg-white shadow-md overflow-hidden w-full">
-                        {/* Image Container with fixed height and width */}
-                        <div className="w-[350px] h-[400px] overflow-hidden">
+                      {/* Card Container - Removed transform effect */}
+                      <div className="bg-white shadow-md hover:shadow-2xl transition-all duration-300 flex-1">
+                        {/* Image Container - Removed hover scale effect */}
+                        <div className="relative overflow-hidden h-[400px] w-full">
                           <img
                             src={product.image}
                             alt={product.name}
@@ -200,9 +201,9 @@ export function Cart() {
                         </div>
                       </div>
 
-                      {/* Product Info */}
-                      <div className="mt-3 text-center">
-                        <h3 className="italic uppercase mb-1 text-lg font-medium">
+                      {/* Product Info - Outside below the card */}
+                      <div className="mt-4 text-center">
+                        <h3 className="italic uppercase mb-1 text-lg font-medium transition-colors">
                           {product.name}
                         </h3>
                         <p className="text-gray-700 font-light">{product.price}</p>
